@@ -1,56 +1,64 @@
-# Nonlinear Optimization: Campbell Motors
-
-This project models and solves a nonlinear optimization problem using Pyomo in Python, focusing on maximizing profits for a car dealership named Campbell Motors. The business scenario involves determining the optimal pricing strategy for trucks and wagons, considering labor constraints and price-sensitive demand functions.
+# Optimization of Furniture Production – Woodstock Co.
+This project models and solves a linear programming problem using the graphical method to help Woodstock Co. determine the optimal mix of tables and chairs that maximizes profit under resource constraints.
 
 Problem Description
-Campbell Motors wants to:
+Woodstock Co. produces chairs and tables. Each product requires a certain amount of labor and wood, and the company seeks to maximize profits given limited resources. The key elements of the problem are:
 
-Maximize total profit from the sale of trucks and wagons.
+Chairs
 
-Respect a limited labor capacity of 250 hours.
+Profit: $20 each
 
-Incorporate nonlinear demand curves that relate price to expected demand for each vehicle type.
+Requires 2 hours of labor and 4 units of wood
 
-The project uses the following:
+Tables
 
-Nonlinear price-demand equations:
+Profit: $30 each
 
-Truck Demand = 500 − 17 × (TruckPrice / 1,000)
+Requires 3 hours of labor and 5 units of wood
 
-Wagon Demand = 400 − 12 × (WagonPrice / 1,000)
+Constraints
 
-Cost of goods:
+Maximum of 120 hours of labor available
 
-Truck = $20,000
+Maximum of 200 units of wood available
 
-Wagon = $25,000
+Objective
+Maximize the total profit:
 
-Labor usage:
+java
+Copiar
+Editar
+Maximize Z = 20x + 30y
+Subject to:
 
-Truck = 3 hours
+scss
+Copiar
+Editar
+2x + 3y ≤ 120  (labor constraint)
+4x + 5y ≤ 200  (wood constraint)
+x, y ≥ 0       (non-negativity)
+Solution Approach
+The problem is solved graphically.
 
-Wagon = 2 hours
+Feasible region is plotted based on constraints.
+
+Corner points (vertices) of the feasible region are identified.
+
+The profit function is evaluated at each vertex to find the optimal solution.
 
 Tools Used
-Pyomo
+Python
 
-IPOPT solver
+Matplotlib
 
-Google Colab environment (with dynamic installation of missing packages)
+NumPy
 
-Optimal Solution
-Truck Price: $26,049
+Output
+Graph showing constraints and feasible region
 
-Wagon Price: $30,062
+Optimal production mix
 
-Maximum Profit: $544,505
-
-How to Run
-Open the notebook in Google Colab or Jupyter.
-
-Ensure pyomo and ipopt are installed (automatically handled in Colab).
-
-Execute cells sequentially.
+Maximum profit
 
 📝 License Distributed under the GNU GPL 3.0 License.
 
