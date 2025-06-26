@@ -1,4 +1,5 @@
-#Nonlinear Optimization: Campbell Motors
+# #Nonlinear Optimization: Campbell Motors
+
 This project models and solves a nonlinear optimization problem using Pyomo in Python, focusing on maximizing profits for a car dealership named Campbell Motors. The business scenario involves determining the optimal pricing strategy for trucks and wagons, considering labor constraints and price-sensitive demand functions.
 
 Problem Description
